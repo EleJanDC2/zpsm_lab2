@@ -59,3 +59,31 @@ getWeightedAverage(user);
 const subject = _.find(user.allGrades, subject => subject.weight === 1);
 
 console.log(subject);
+
+function getMails(collections) {
+  const strings = collections.filter(item => typeof item === "string");
+
+  const emails = strings.filter(
+    string => string.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}/)
+  );
+
+  emails.sort();
+
+  console.log(emails);
+}
+
+const collections = [
+  {},
+  15,
+  "hello@test.pl",
+  null,
+  ["aaa", "bbb", 5],
+  "admin@gmail.com",
+  undefined,
+  "a34@yahoo.com",
+  "321@a",
+  "321.pl",
+];
+
+getMails(collections);
+
