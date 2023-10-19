@@ -1,5 +1,3 @@
-// Pusty plik
-
 import _ from "lodash";
 
 let array1 = [1,3,5,7,9];
@@ -29,13 +27,11 @@ function getWeightedAverage(user) {
     }
   }
 
-
   let weightedAverage = totalGrades / totalWeight;
 
   console.log(`${user.name} ${user.surname}: ${weightedAverage}`);
 }
 
-// Przykład użycia
 const user = {
   name: "Imie",
   surname: "Nazwisko",
