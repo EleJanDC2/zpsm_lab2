@@ -15,13 +15,13 @@ console.log("Max: " + max);
 console.log("Min: " + min);
 
 function getWeightedAverage(user) {
-  // Zsumuj wagi wszystkich przedmiotów
+
   let totalWeight = 0;
   for (const subject of user.allGrades) {
     totalWeight += subject.weight;
   }
 
-  // Zsumuj wagi wszystkich ocen dla każdego przedmiotu
+
   let totalGrades = 0;
   for (const subject of user.allGrades) {
     for (const grade of subject.grades) {
@@ -29,10 +29,9 @@ function getWeightedAverage(user) {
     }
   }
 
-  // Oblicz średnią ważoną
+
   let weightedAverage = totalGrades / totalWeight;
 
-  // Wypisz imię i nazwisko wraz ze średnią ważoną
   console.log(`${user.name} ${user.surname}: ${weightedAverage}`);
 }
 
