@@ -56,3 +56,6 @@ const user = {
 
 getWeightedAverage(user);
 
+const subject = _.find(user.allGrades, subject => subject.weight === 1);
+
+console.log(subject);
